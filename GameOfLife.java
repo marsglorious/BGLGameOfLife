@@ -89,10 +89,11 @@ public class GameOfLife extends JPanel {
 
     private static int[][] parseString(String s) {
         if (s.equals("[]") || s.equals("[ ]")) return new int[0][0];
-        String[] cells = s.split("], \\[");
+        s = s.replaceAll(" ", "");
+        String[] cells = s.split("],\\[");
         int[][] result = new int[cells.length][2];
         for (int i = 0; i < cells.length; i++) {
-            String[] cell = cells[i].replaceAll("\\[|]", "").split(", ");
+            String[] cell = cells[i].replaceAll("\\[|]", "").split(",");
             result[i] = new int[]{Integer.parseInt(cell[0]), Integer.parseInt(cell[1])};
         }
         return result;
