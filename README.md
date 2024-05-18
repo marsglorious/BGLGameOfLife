@@ -2,7 +2,6 @@
 Conway's Game of Life - BGLCorp
 
 Installation
-
 ============
 
 git clone https://github.com/marsglorious/BGLGameOfLife.git
