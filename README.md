@@ -1,5 +1,5 @@
 # BGLGameOfLife
-Conway's Game of Life - BGLCorp
+Conway's Game of Life - BGLCorp - Linus Maas
 
 Installation
 ============
