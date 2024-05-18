@@ -1,6 +1,9 @@
 # BGLGameOfLife
 Conway's Game of Life - BGLCorp
 
+Installation
+============
+git clone 
 
 
 Usage: java GameOfLife "[[x1, y1], [x2, y2], ...]"
