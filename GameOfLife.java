@@ -88,6 +88,7 @@ public class GameOfLife extends JPanel {
     }
 
     private static int[][] parseString(String s) {
+        if (s.equals("[]") || s.equals("[ ]")) return new int[0][0];
         String[] cells = s.split("], \\[");
         int[][] result = new int[cells.length][2];
         for (int i = 0; i < cells.length; i++) {
@@ -111,15 +112,5 @@ public class GameOfLife extends JPanel {
         frame.setSize(500, 500); // Adjust the size as needed
         frame.add(new GameOfLife(starterCells));
         frame.setVisible(true);
-    }
-
-    public static int[][] randomStarterCells() {
-        Random random = new Random();
-        int MAX = 10000;
-        int[][] starterCells = new int[MAX][2];
-        for (int i = 0; i < MAX; i++) {
-            starterCells[i] = new int[]{random.nextInt(WIDTH), random.nextInt(HEIGHT)};
-        }
-        return starterCells;
     }
 }
